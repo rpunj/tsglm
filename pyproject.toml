@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tsglm_py"
+version = "0.1.0"
+description = "Time series forecasting with generalized linear models"
+requires-python = ">=3.8"
+license = {text = "MIT"}
