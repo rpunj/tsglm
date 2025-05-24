@@ -1,13 +1,25 @@
 # tsglm
 This repository contains the source code for time series forecasting with generalized linear models.
+It includes the original R implementation and a Python port located in `tsglm_py`.
 
 ## Installation
 
-You can download this source code and open as an RStudio project.
+Create the conda environment using `mamba` and install the package:
+
+```bash
+mamba env create -f environment.yml
+mamba activate tsglm_env
+mamba build recipe
+```
+
+The resulting package can then be installed with `mamba install <path-to-conda-package>` or by using `pip install .` inside the environment.
 
 ## Example
 
-The [main.R](R/main.R) contains an example of forecasting the incidence of dengue cases using an Negative Binomial model, taking into account the rainfall effect.
+The [`R/main.R`](R/main.R) file contains the original R example.
+For the Python version, run `python_main.py` after activating the environment.
+
+The example forecasts dengue incidence using a Negative Binomial model and rainfall as a regressor.
 A similar approach was used in [this paper](https://periodicos.ufpb.br/index.php/gaia/article/view/61267).
 
 ## Citation
